@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <base target="_top">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Morse</title>
+
+  <?!= include('CSS'); ?>
+
+</head>
+
+<body>
+
+<div class="game">
+
+  <!-- ========================= -->
+  <!-- HEADER -->
+  <!-- ========================= -->
+
+  <header>
+
+    <div class="logo">
+      MORSE
+    </div>
+
+    <div class="subtitle">
+      MORSE CHALLENGE
+    </div>
+
+  </header>
+
+
+  <!-- ========================= -->
+  <!-- LOGIN -->
+  <!-- ========================= -->
+
+  <section id="loginScreen" class="screen active">
+
+    <div class="card">
+
+      <h1>MORSE</h1>
+
+      <p class="description">
+        Uji kemampuanmu membaca kode Morse.
+      </p>
+
+      <input
+        id="username"
+        type="text"
+        maxlength="20"
+        placeholder="Username"
+      >
+
+      <input
+        id="whatsapp"
+        type="tel"
+        placeholder="Nomor WhatsApp"
+      >
+
+      <button
+        id="startButton"
+        onclick="startGame()">
+
+        MULAI BERMAIN
+
+      </button>
+
+      <button
+        class="secondary"
+        onclick="showLeaderboard()">
+
+        🏆 LEADERBOARD
+
+      </button>
+
+      <div id="loginMessage"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ========================= -->
+  <!-- GAME -->
+  <!-- ========================= -->
+
+  <section id="gameScreen" class="screen">
+
+    <div class="gameTop">
+
+      <div>
+        SOAL
+        <span id="questionNumber">1</span>/10
+      </div>
+
+      <div>
+        SKOR
+        <span id="score">0</span>
+      </div>
+
+    </div>
+
+
+    <div class="morseBox">
+
+      <div class="label">
+        KODE MORSE
+      </div>
+
+      <div id="morseCode" class="morseCode">
+        .-
+      </div>
+
+    </div>
+
+
+    <div
+      id="answers"
+      class="answers">
+    </div>
+
+
+    <div class="progress">
+
+      <div
+        id="progressBar"
+        class="progressBar">
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ========================= -->
+  <!-- RESULT -->
+  <!-- ========================= -->
+
+  <section id="resultScreen" class="screen">
+
+    <div class="card">
+
+      <h1>GAME SELESAI!</h1>
+
+      <div class="finalScore">
+
+        <span id="finalScore">
+          0
+        </span>
+
+        <small>
+          POIN
+        </small>
+
+      </div>
+
+      <p>
+        Benar:
+        <b id="finalCorrect">0</b>
+      </p>
+
+      <p>
+        Salah:
+        <b id="finalWrong">0</b>
+      </p>
+
+      <button onclick="showLeaderboard()">
+        🏆 LIHAT LEADERBOARD
+      </button>
+
+      <button
+        class="secondary"
+        onclick="backToMenu()">
+
+        MAIN LAGI
+
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ========================= -->
+  <!-- LEADERBOARD -->
+  <!-- ========================= -->
+
+  <section id="leaderboardScreen" class="screen">
+
+    <div class="card leaderboardCard">
+
+      <h1>🏆 LEADERBOARD</h1>
+
+      <div id="leaderboard">
+        Memuat leaderboard...
+      </div>
+
+      <button
+        class="secondary"
+        onclick="backToMenu()">
+
+        KEMBALI
+
+      </button>
+
+    </div>
+
+  </section>
+
+</div>
+
+
+<?!= include('JS'); ?>
+
+</body>
+
+</html>
