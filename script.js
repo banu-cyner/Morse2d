@@ -13,7 +13,7 @@
 // ========================================
 
 const SCRIPT_URL =
-  "TEMPEL_LINK_DEPLOY_GOOGLE_SCRIPT_DISINI";
+  "https://script.google.com/macros/s/AKfycbzM6n0SKaDiHc2TnanBbraXcwx7hTId5e6lZnH1NCgc5hL_m7kAxzLPSurcguSJ4X9Y9Q/exec";
 
 
 // ========================================
